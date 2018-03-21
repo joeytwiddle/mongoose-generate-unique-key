@@ -1,19 +1,3 @@
-/**
- * Usage:
- *
- *     const schema = new Schema({
- *       _id: { type: Number },
- *       // ...
- *     });
- *
- *     userSchema.plugin(generateUniqueKey(() => String(Math.floor(Math.random() * 1000000))));
- *
- * If no field is specified, the `_id` field is assumed.  But you can specify a field name if you want to:
- *
- *     userSchema.plugin('userKey', generateUniqueKey(() => String(Math.floor(Math.random() * 1000000))));
- *
- */
-
 module.exports = function generateUniqueKey (fieldName, generator) {
   if (typeof fieldName === 'function' && !generator) {
     generator = fieldName;
