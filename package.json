@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-generate-unique-key",
+  "version": "0.1.0",
+  "description": "Use small random document ids, avoid collisions by checking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeytwiddle/mongoose-generate-unique-key.git"
+  },
+  "keywords": [
+    "mongoose"
+  ],
+  "author": "Paul \\\"Joey\\\" Clark <joeytwiddle@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeytwiddle/mongoose-generate-unique-key/issues"
+  },
+  "homepage": "https://github.com/joeytwiddle/mongoose-generate-unique-key#readme"
+}
