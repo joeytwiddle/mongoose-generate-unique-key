@@ -39,7 +39,7 @@ function generateUniqueValue (document, fieldName, generator) {
   return collection.findOne(query).then(function (found) {
     if (found) {
       // Try again
-      return generateUniqueValue(document, generator, collection);
+      return generateUniqueValue(document, fieldName, generator);
     }
     // Not found, we can use this value
     return newValue;
