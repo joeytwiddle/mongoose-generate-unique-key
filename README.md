@@ -23,7 +23,7 @@ With this approach, our key size only needs to be around twice as large as than 
 
 If no field is specified, the `_id` field is assumed.  But you can specify a field name if you want to:
 
-    userSchema.plugin('userKey', generateUniqueKey(() => String(Math.floor(Math.random() * 1000000))));
+    userSchema.plugin(generateUniqueKey('userKey', () => String(Math.floor(Math.random() * 1000000))));
 
 Of course it is recommended that you index the field.
 
@@ -41,7 +41,7 @@ Of course it is recommended that you index the field.
 
    That said, if you are saving a lot of documents in parallel every second, then you should probably be more concerned about DB performance than key size.  In that case, we recommend using nanoid, or good old ObjectIds.
 
-3. If you are generating random ids because you don't want your ids to be predictable, then bear in mind that choosing a smaller key size means attackers will be able to discover your document ids, even if they cannot predict them.
+3. If you are generating random ids because you don't want your ids to be predictable, then bear in mind that choosing a smaller key size means attackers will be able to discover your document ids more easily, even if they cannot predict them.
 
 ## TODO
 
